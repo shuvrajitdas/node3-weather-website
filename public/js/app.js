@@ -12,6 +12,7 @@ const search = document.querySelector('input')
 const messageOne = document.querySelector('#message-1')
 const messageTwo = document.querySelector('#message-2')
 
+
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
 
@@ -29,7 +30,7 @@ weatherForm.addEventListener('submit', (e) => {
             // console.log(data.location)
             console.log(data.forecast)
             messageOne.textContent = data.location
-            messageTwo.textContent = 'The temperature is ' + data.forecast.temperature + ' but feels like ' + data.forecast.feels_like
+            messageTwo.textContent = 'The temperature is ' + data.forecast.temperature + ' but feels like ' + data.forecast.feels_like + ' and humidity is ' + data.forecast.humidity
         }
     })
 })
